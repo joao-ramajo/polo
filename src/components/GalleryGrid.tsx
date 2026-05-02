@@ -56,8 +56,8 @@ function GalleryTile({ image }: GalleryTileProps) {
 
 export function GalleryGrid({ images }: GalleryGridProps) {
   return (
-    <section className="px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
-      <div className="mx-auto max-w-site">
+    <section className="py-12 lg:py-16">
+      <div className="mx-auto max-w-site px-4 sm:px-6 lg:px-8">
         <div className="mb-8 max-w-xl lg:mb-12">
           <p className="text-[0.68rem] uppercase tracking-[0.4em] text-accent">
             Portfolio
@@ -66,7 +66,9 @@ export function GalleryGrid({ images }: GalleryGridProps) {
             Curadoria em grid livre.
           </h2>
         </div>
+      </div>
 
+      <div className="px-4 sm:px-6 lg:px-8">
         <div className="gallery-grid grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-12 lg:gap-5">
           {images.map((image) => (
             <GalleryTile key={image.id} image={image} />
