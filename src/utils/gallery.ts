@@ -42,7 +42,6 @@ export function getGalleryTileClasses(shape: TattooLayoutHint): string {
       return "aspect-square lg:col-span-4 lg:row-span-4 lg:h-full lg:aspect-auto";
     case "tall":
       return "aspect-[3/5] lg:col-span-3 lg:row-span-5 lg:h-full lg:aspect-auto";
-    case "portrait":
     default:
       return "aspect-[4/5] lg:col-span-4 lg:row-span-5 lg:h-full lg:aspect-auto";
   }

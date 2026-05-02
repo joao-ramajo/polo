@@ -122,8 +122,8 @@ img {
   .theme-brutalist-mono .via-background\/20,
   .theme-brutalist-mono .via-background\/45 {
     --tw-gradient-stops: var(--tw-gradient-from),
-      color-mix(in srgb, var(--color-background) 20%, transparent) var(--tw-gradient-via-position),
-      var(--tw-gradient-to);
+      color-mix(in srgb, var(--color-background) 20%, transparent)
+      var(--tw-gradient-via-position), var(--tw-gradient-to);
   }
 
   .theme-brutalist-mono .group.relative.overflow-hidden,

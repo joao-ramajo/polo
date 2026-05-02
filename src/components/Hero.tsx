@@ -43,7 +43,10 @@ export function Hero({ artist, featuredImage }: HeroProps) {
           </div>
 
           <div className="relative animate-fade-up [animation-delay:140ms]">
-            <div className="absolute inset-x-10 top-12 h-64 rounded-full bg-accent/10 blur-3xl" aria-hidden="true" />
+            <div
+              className="absolute inset-x-10 top-12 h-64 rounded-full bg-accent/10 blur-3xl"
+              aria-hidden="true"
+            />
             <div className="relative ml-auto w-full max-w-[30rem]">
               <img
                 src={featuredImage?.src}

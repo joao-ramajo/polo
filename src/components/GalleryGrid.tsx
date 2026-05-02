@@ -1,9 +1,6 @@
 import { useState } from "react";
 import type { TattooImage, TattooLayoutHint } from "../types/portfolio";
-import {
-  getGalleryTileClasses,
-  getGalleryTileShape,
-} from "../utils/gallery";
+import { getGalleryTileClasses, getGalleryTileShape } from "../utils/gallery";
 
 type GalleryGridProps = {
   images: TattooImage[];

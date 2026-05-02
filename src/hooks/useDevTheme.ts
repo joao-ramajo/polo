@@ -18,7 +18,9 @@ function getStoredThemeId(): string {
     return activeTheme.id;
   }
 
-  return resolveThemeId(window.localStorage.getItem(DEV_THEME_STORAGE_KEY) ?? undefined);
+  return resolveThemeId(
+    window.localStorage.getItem(DEV_THEME_STORAGE_KEY) ?? undefined,
+  );
 }
 
 type UseDevThemeOptions = {

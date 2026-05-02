@@ -3,7 +3,8 @@ import type { ThemePreset } from "./types";
 export const journalMonoTheme: ThemePreset = {
   id: "journal-mono",
   name: "Jornal Mono",
-  description: "Base inspirada em jornal experimental, com leitura monoespacada e contraste contido.",
+  description:
+    "Base inspirada em jornal experimental, com leitura monoespacada e contraste contido.",
   rootClassName: "theme-journal-mono theme-layout-journal",
   colors: {
     background: "#efede7",
@@ -17,8 +18,7 @@ export const journalMonoTheme: ThemePreset = {
     body: '"IBM Plex Mono", ui-monospace, monospace',
   },
   effects: {
-    pageBackground:
-      "linear-gradient(180deg, #f4f1eb 0%, #ece8df 100%)",
+    pageBackground: "linear-gradient(180deg, #f4f1eb 0%, #ece8df 100%)",
     selection: "rgba(54, 54, 54, 0.16)",
     glowShadow: "0 12px 48px rgba(54, 54, 54, 0.08)",
     ambientOne: "rgba(54, 54, 54, 0.05)",

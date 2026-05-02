@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { activeTheme } from "../data/theme";
-import { PortfolioPage } from "./PortfolioPage";
 import { themeOptions } from "../themes";
+import { PortfolioPage } from "./PortfolioPage";
 
 const THEME_PARAM = "theme";
 
@@ -63,15 +63,17 @@ export function ThemePreviewPage({
                   }`}
                 >
                   <div className="flex items-center gap-2">
-                    {[theme.colors.background, theme.colors.surface, theme.colors.accent].map(
-                      (color) => (
-                        <span
-                          key={color}
-                          className="h-4 w-4 rounded-full border border-black/10"
-                          style={{ backgroundColor: color }}
-                        />
-                      ),
-                    )}
+                    {[
+                      theme.colors.background,
+                      theme.colors.surface,
+                      theme.colors.accent,
+                    ].map((color) => (
+                      <span
+                        key={color}
+                        className="h-4 w-4 rounded-full border border-black/10"
+                        style={{ backgroundColor: color }}
+                      />
+                    ))}
                   </div>
                   <p className="mt-4 font-display text-2xl leading-none text-white">
                     {theme.name}

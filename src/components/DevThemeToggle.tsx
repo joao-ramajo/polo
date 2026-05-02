@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { hiddenThemeRoute } from "../utils/env";
 import { themeOptions } from "../themes";
+import { hiddenThemeRoute } from "../utils/env";
 
 type DevThemeToggleProps = {
   selectedThemeId: string;
@@ -52,15 +52,17 @@ export function DevThemeToggle({
                     }`}
                   >
                     <div className="flex items-center gap-2">
-                      {[theme.colors.background, theme.colors.surface, theme.colors.accent].map(
-                        (color) => (
-                          <span
-                            key={color}
-                            className="h-3.5 w-3.5 rounded-full border border-black/10"
-                            style={{ backgroundColor: color }}
-                          />
-                        ),
-                      )}
+                      {[
+                        theme.colors.background,
+                        theme.colors.surface,
+                        theme.colors.accent,
+                      ].map((color) => (
+                        <span
+                          key={color}
+                          className="h-3.5 w-3.5 rounded-full border border-black/10"
+                          style={{ backgroundColor: color }}
+                        />
+                      ))}
                     </div>
                     <p className="mt-3 font-display text-2xl leading-none">
                       {theme.name}

@@ -3,7 +3,8 @@ import type { ThemePreset } from "./types";
 export const monochromeAtelierTheme: ThemePreset = {
   id: "monochrome-atelier",
   name: "Monocromatico Atelier",
-  description: "Leitura mais fotografica, com cinzas profundos e detalhes discretos.",
+  description:
+    "Leitura mais fotografica, com cinzas profundos e detalhes discretos.",
   rootClassName: "theme-monochrome-atelier theme-layout-monochrome",
   colors: {
     background: "#121212",

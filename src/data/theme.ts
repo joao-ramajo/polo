@@ -1,6 +1,6 @@
 import { themePresets } from "../themes";
 
-export const activeThemeId = "dark-editorial";
+export const activeThemeId = "monochrome-atelier";
 
 export const activeTheme = themePresets[activeThemeId];
 

@@ -3,7 +3,8 @@ import type { ThemePreset } from "./types";
 export const darkEditorialTheme: ThemePreset = {
   id: "dark-editorial",
   name: "Escuro Editorial",
-  description: "Base premium com fundo escuro, contraste elegante e clima de galeria.",
+  description:
+    "Base premium com fundo escuro, contraste elegante e clima de galeria.",
   rootClassName: "theme-dark-editorial theme-layout-editorial",
   colors: {
     background: "#0d0d0d",

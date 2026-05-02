@@ -1,13 +1,13 @@
+import { artist } from "../data/artist";
+import { gallery } from "../data/gallery";
+import { type ThemePreset, getThemeCssVariables } from "../themes";
+import { getFeaturedImages, getGalleryImages } from "../utils/gallery";
 import { AboutArtist } from "./AboutArtist";
 import { CallToAction } from "./CallToAction";
 import { FeaturedGallery } from "./FeaturedGallery";
 import { Footer } from "./Footer";
 import { GalleryGrid } from "./GalleryGrid";
 import { Hero } from "./Hero";
-import { artist } from "../data/artist";
-import { gallery } from "../data/gallery";
-import { getThemeCssVariables, type ThemePreset } from "../themes";
-import { getFeaturedImages, getGalleryImages } from "../utils/gallery";
 
 type PortfolioPageProps = {
   theme: ThemePreset;
@@ -28,7 +28,10 @@ export function PortfolioPage({ theme }: PortfolioPageProps) {
         fontFamily: "var(--font-body)",
       }}
     >
-      <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+      <div
+        className="pointer-events-none absolute inset-0 overflow-hidden"
+        aria-hidden="true"
+      >
         <div
           className="absolute left-[-8rem] top-0 h-80 w-80 rounded-full blur-3xl"
           style={{ backgroundColor: theme.effects.ambientOne }}

@@ -68,34 +68,34 @@ export function FeaturedGallery({ images }: FeaturedGalleryProps) {
                 hasTwoImages ? "" : "sm:grid-cols-2 lg:grid-cols-1"
               } lg:gap-8`}
             >
-            {supporting.map((image, index) => (
-              <article
-                key={image.id}
-                className="group relative overflow-hidden"
-                style={{ animationDelay: `${index * 120}ms` }}
-              >
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className={`w-full object-cover transition duration-700 group-hover:scale-[1.04] ${
-                    hasTwoImages
-                      ? "h-[26rem] sm:h-[34rem] lg:h-[42rem]"
-                      : "h-[22rem] sm:h-[24rem] lg:h-[19.75rem]"
-                  }`}
-                  loading="lazy"
-                />
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background via-background/15 to-transparent px-4 pb-4 pt-10">
-                  <div>
-                    <p className="text-[0.68rem] uppercase tracking-[0.34em] text-accent">
-                      {image.category}
-                    </p>
-                    <p className="mt-2 text-sm uppercase tracking-[0.18em] text-text/82">
-                      {image.alt}
-                    </p>
+              {supporting.map((image, index) => (
+                <article
+                  key={image.id}
+                  className="group relative overflow-hidden"
+                  style={{ animationDelay: `${index * 120}ms` }}
+                >
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className={`w-full object-cover transition duration-700 group-hover:scale-[1.04] ${
+                      hasTwoImages
+                        ? "h-[26rem] sm:h-[34rem] lg:h-[42rem]"
+                        : "h-[22rem] sm:h-[24rem] lg:h-[19.75rem]"
+                    }`}
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background via-background/15 to-transparent px-4 pb-4 pt-10">
+                    <div>
+                      <p className="text-[0.68rem] uppercase tracking-[0.34em] text-accent">
+                        {image.category}
+                      </p>
+                      <p className="mt-2 text-sm uppercase tracking-[0.18em] text-text/82">
+                        {image.alt}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </article>
-            ))}
+                </article>
+              ))}
             </div>
           )}
         </div>

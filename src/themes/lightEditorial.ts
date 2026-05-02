@@ -3,7 +3,8 @@ import type { ThemePreset } from "./types";
 export const lightEditorialTheme: ThemePreset = {
   id: "light-editorial",
   name: "Claro Editorial",
-  description: "Versao clara com atmosfera de revista premium e contraste suave.",
+  description:
+    "Versao clara com atmosfera de revista premium e contraste suave.",
   rootClassName: "theme-light-editorial theme-layout-editorial",
   colors: {
     background: "#f4efe6",
