@@ -1,3 +1,10 @@
+export type TattooLayoutHint =
+  | "wide"
+  | "landscape"
+  | "square"
+  | "portrait"
+  | "tall";
+
 export type Artist = {
   name: string;
   headline: string;
@@ -14,4 +21,5 @@ export type TattooImage = {
   category: string;
   featured: boolean;
   order: number;
+  layoutHint?: TattooLayoutHint;
 };
