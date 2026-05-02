@@ -12,14 +12,14 @@ export default {
         accent: "var(--color-accent)",
       },
       fontFamily: {
-        display: ['"Fraunces"', "serif"],
-        sans: ['"Manrope"', "ui-sans-serif", "system-ui", "sans-serif"],
+        display: ["var(--font-display)"],
+        sans: ["var(--font-body)"],
       },
       maxWidth: {
         site: "var(--max-width)",
       },
       boxShadow: {
-        glow: "0 20px 80px rgba(201, 162, 39, 0.12)",
+        glow: "var(--shadow-glow)",
       },
       keyframes: {
         "fade-up": {
