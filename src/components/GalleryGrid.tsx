@@ -8,9 +8,10 @@ type GalleryGridProps = {
 
 type GalleryTileProps = {
   image: TattooImage;
+  index: number;
 };
 
-function GalleryTile({ image }: GalleryTileProps) {
+function GalleryTile({ image, index }: GalleryTileProps) {
   const [shape, setShape] = useState<TattooLayoutHint>(
     image.layoutHint ?? "portrait",
   );
@@ -18,12 +19,12 @@ function GalleryTile({ image }: GalleryTileProps) {
   return (
     <figure
       key={image.id}
-      className={`gallery-tile group relative overflow-hidden ${getGalleryTileClasses(shape)}`}
+      className={`gallery-tile group relative overflow-hidden ${getGalleryTileClasses(shape, index)}`}
     >
       <img
         src={image.src}
         alt={image.alt}
-        className="h-full w-full object-cover transition duration-700 group-hover:scale-[1.05]"
+        className="h-full w-full object-cover transition-all duration-500 group-hover:scale-[1.03]"
         loading="lazy"
         onLoad={(event) => {
           if (image.layoutHint) {
@@ -39,7 +40,8 @@ function GalleryTile({ image }: GalleryTileProps) {
           setShape(getGalleryTileShape(naturalWidth / naturalHeight));
         }}
       />
-      <figcaption className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 bg-gradient-to-t from-background via-background/20 to-transparent px-4 pb-4 pt-10">
+      <div className="absolute inset-0 bg-black/40 opacity-0 transition-all duration-300 group-hover:opacity-100" />
+      <figcaption className="absolute inset-x-0 bottom-0 flex translate-y-0 items-end justify-between gap-4 bg-gradient-to-t from-background via-background/20 to-transparent px-4 pb-4 pt-10 opacity-100 transition-all duration-300 lg:translate-y-4 lg:opacity-0 lg:group-hover:translate-y-0 lg:group-hover:opacity-100">
         <p className="text-[0.68rem] uppercase tracking-[0.34em] text-text/76">
           {image.category}
         </p>
@@ -67,8 +69,8 @@ export function GalleryGrid({ images }: GalleryGridProps) {
 
       <div className="mx-auto w-full max-w-[1680px] px-4 sm:px-6 lg:px-8">
         <div className="gallery-grid grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-12 lg:gap-5">
-          {images.map((image) => (
-            <GalleryTile key={image.id} image={image} />
+          {images.map((image, index) => (
+            <GalleryTile key={image.id} image={image} index={index} />
           ))}
         </div>
       </div>

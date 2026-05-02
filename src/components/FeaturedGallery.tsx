@@ -41,7 +41,7 @@ export function FeaturedGallery({ images }: FeaturedGalleryProps) {
             <img
               src={lead.src}
               alt={lead.alt}
-              className={`w-full object-cover transition duration-700 group-hover:scale-[1.03] ${
+              className={`w-full object-cover transition-all duration-500 group-hover:scale-[1.02] ${
                 hasSingleImage
                   ? "h-[30rem] sm:h-[38rem] lg:h-[46rem]"
                   : hasTwoImages
@@ -50,6 +50,7 @@ export function FeaturedGallery({ images }: FeaturedGalleryProps) {
               }`}
               loading="lazy"
             />
+            <div className="absolute inset-0 bg-black/40 opacity-0 transition-all duration-300 group-hover:opacity-100" />
             <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 bg-gradient-to-t from-background via-background/20 to-transparent px-4 pb-4 pt-12 sm:px-6 sm:pb-6">
               <div>
                 <p className="text-[0.68rem] uppercase tracking-[0.34em] text-accent">
@@ -77,13 +78,14 @@ export function FeaturedGallery({ images }: FeaturedGalleryProps) {
                   <img
                     src={image.src}
                     alt={image.alt}
-                    className={`w-full object-cover transition duration-700 group-hover:scale-[1.04] ${
+                    className={`w-full object-cover transition-all duration-500 group-hover:scale-[1.02] ${
                       hasTwoImages
                         ? "h-[26rem] sm:h-[34rem] lg:h-[42rem]"
                         : "h-[22rem] sm:h-[24rem] lg:h-[19.75rem]"
                     }`}
                     loading="lazy"
                   />
+                  <div className="absolute inset-0 bg-black/40 opacity-0 transition-all duration-300 group-hover:opacity-100" />
                   <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background via-background/15 to-transparent px-4 pb-4 pt-10">
                     <div>
                       <p className="text-[0.68rem] uppercase tracking-[0.34em] text-accent">

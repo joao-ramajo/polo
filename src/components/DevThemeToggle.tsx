@@ -90,14 +90,24 @@ export function DevThemeToggle({
           </div>
         )}
 
-        <button
-          type="button"
-          onClick={() => setIsOpen((current) => !current)}
-          className="inline-flex items-center gap-3 rounded-full border border-white/10 bg-[#090909]/92 px-4 py-3 text-xs uppercase tracking-[0.3em] text-white shadow-2xl backdrop-blur transition hover:border-white/20 hover:bg-[#111111]"
-        >
-          <span className="h-2.5 w-2.5 rounded-full bg-[#c9a227]" />
-          Tema
-        </button>
+        <div className="flex items-center gap-3">
+          <a
+            href={hiddenThemeLabRoute}
+            className="inline-flex items-center gap-3 rounded-full border border-white/10 bg-[#090909]/92 px-4 py-3 text-xs uppercase tracking-[0.3em] text-white shadow-2xl backdrop-blur transition hover:border-white/20 hover:bg-[#111111]"
+          >
+            <span className="h-2.5 w-2.5 rounded-full bg-white/70" />
+            Laboratorio
+          </a>
+
+          <button
+            type="button"
+            onClick={() => setIsOpen((current) => !current)}
+            className="inline-flex items-center gap-3 rounded-full border border-white/10 bg-[#090909]/92 px-4 py-3 text-xs uppercase tracking-[0.3em] text-white shadow-2xl backdrop-blur transition hover:border-white/20 hover:bg-[#111111]"
+          >
+            <span className="h-2.5 w-2.5 rounded-full bg-[#c9a227]" />
+            Tema
+          </button>
+        </div>
       </div>
     </div>
   );
