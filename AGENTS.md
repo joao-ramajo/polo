@@ -12,3 +12,4 @@ Novas regras devem ser adicionadas aqui conforme forem definidas.
 ## Manutencao
 
 - Ao receber novas diretrizes do usuario, registre-as neste arquivo.
+- Centralize variacoes visuais em arquivos de configuracao de tema sempre que possivel.
