@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { activeTheme } from "../data/theme";
 import { PortfolioPage } from "./PortfolioPage";
-import { themeOptions, themePresets } from "../themes";
+import { themeOptions } from "../themes";
 
 const THEME_PARAM = "theme";
 
@@ -10,9 +10,17 @@ function getThemeIdFromUrl(): string {
   return params.get(THEME_PARAM) ?? activeTheme.id;
 }
 
-export function ThemePreviewPage() {
-  const [selectedThemeId, setSelectedThemeId] = useState(getThemeIdFromUrl);
-  const selectedTheme = themePresets[selectedThemeId] ?? activeTheme;
+type ThemePreviewPageProps = {
+  selectedThemeId: string;
+  onSelectTheme: (themeId: string) => void;
+};
+
+export function ThemePreviewPage({
+  selectedThemeId,
+  onSelectTheme,
+}: ThemePreviewPageProps) {
+  const selectedTheme =
+    themeOptions.find((theme) => theme.id === selectedThemeId) ?? activeTheme;
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -47,7 +55,7 @@ export function ThemePreviewPage() {
                 <button
                   key={theme.id}
                   type="button"
-                  onClick={() => setSelectedThemeId(theme.id)}
+                  onClick={() => onSelectTheme(theme.id)}
                   className={`rounded-[1.5rem] border p-4 text-left transition duration-200 ${
                     isActive
                       ? "border-[#c9a227] bg-white/10"
