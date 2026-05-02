@@ -1,55 +1,17 @@
-import { AboutArtist } from "./components/AboutArtist";
-import { CallToAction } from "./components/CallToAction";
-import { FeaturedGallery } from "./components/FeaturedGallery";
-import { Footer } from "./components/Footer";
-import { GalleryGrid } from "./components/GalleryGrid";
-import { Hero } from "./components/Hero";
-import { artist } from "./data/artist";
-import { gallery } from "./data/gallery";
 import { activeTheme } from "./data/theme";
-import { getThemeCssVariables } from "./themes";
-import { getFeaturedImages, getGalleryImages } from "./utils/gallery";
+import { PortfolioPage } from "./components/PortfolioPage";
+import { ThemePreviewPage } from "./components/ThemePreviewPage";
+import { hiddenThemeRoute, isDevModeEnabled } from "./utils/env";
 
 function App() {
-  const featuredImages = getFeaturedImages(gallery);
-  const galleryImages = getGalleryImages(gallery);
-  const heroImage = featuredImages[0] ?? galleryImages[0];
-  const themeStyle = getThemeCssVariables(activeTheme);
+  const pathname = window.location.pathname;
+  const isThemePreviewRoute = pathname === hiddenThemeRoute;
 
-  return (
-    <div
-      className={`relative min-h-screen bg-background text-text ${activeTheme.rootClassName}`}
-      style={{
-        ...themeStyle,
-        background: activeTheme.effects.pageBackground,
-        fontFamily: "var(--font-body)",
-      }}
-    >
-      <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
-        <div
-          className="absolute left-[-8rem] top-0 h-80 w-80 rounded-full blur-3xl"
-          style={{ backgroundColor: activeTheme.effects.ambientOne }}
-        />
-        <div
-          className="absolute right-[-10rem] top-[28rem] h-96 w-96 rounded-full blur-3xl"
-          style={{ backgroundColor: activeTheme.effects.ambientTwo }}
-        />
-        <div
-          className="absolute bottom-[-8rem] left-1/3 h-72 w-72 rounded-full blur-3xl"
-          style={{ backgroundColor: activeTheme.effects.ambientThree }}
-        />
-      </div>
+  if (isThemePreviewRoute && isDevModeEnabled) {
+    return <ThemePreviewPage />;
+  }
 
-      <main className="relative">
-        <Hero artist={artist} featuredImage={heroImage} />
-        <FeaturedGallery images={featuredImages} />
-        <GalleryGrid images={galleryImages} />
-        <AboutArtist artist={artist} />
-        <CallToAction artist={artist} />
-      </main>
-      <Footer artistName={artist.name} />
-    </div>
-  );
+  return <PortfolioPage theme={activeTheme} />;
 }
 
 export default App;
