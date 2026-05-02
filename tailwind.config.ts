@@ -12,7 +12,7 @@ export default {
         accent: "var(--color-accent)",
       },
       fontFamily: {
-        display: ['"Bodoni Moda"', "serif"],
+        display: ['"Fraunces"', "serif"],
         sans: ['"Manrope"', "ui-sans-serif", "system-ui", "sans-serif"],
       },
       maxWidth: {
