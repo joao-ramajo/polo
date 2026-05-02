@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1600" fill="none">
+  <rect width="1200" height="1600" fill="#101010" />
+  <path d="M182 1038c129-84 253-126 372-126 120 0 241-43 364-127 122-83 216-190 282-319" stroke="#C9A227" stroke-width="10" stroke-linecap="round" />
+  <path d="M158 1150c120-79 236-132 348-160 111-27 223-80 336-158 113-79 225-201 338-367" stroke="#F5F5F5" stroke-opacity=".72" stroke-width="6" stroke-linecap="round" />
+  <circle cx="286" cy="434" r="134" stroke="#F5F5F5" stroke-opacity=".38" stroke-width="10" />
+  <circle cx="286" cy="434" r="56" stroke="#C9A227" stroke-width="6" />
+  <text x="120" y="1430" fill="#F5F5F5" fill-opacity=".92" font-family="Georgia, serif" font-size="92">Contrast</text>
+  <text x="120" y="1502" fill="#A3A3A3" font-family="Arial, sans-serif" font-size="28" letter-spacing="10">PLACEHOLDER 005</text>
+</svg>

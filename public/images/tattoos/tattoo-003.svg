@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1600" fill="none">
+  <rect width="1200" height="1600" fill="#111111" />
+  <path d="M204 1166c135-48 244-123 328-225 84-103 179-171 287-202 110-31 213-102 311-214" stroke="#F5F5F5" stroke-opacity=".88" stroke-width="12" stroke-linecap="round" />
+  <path d="M161 1256c203-46 374-145 511-298 122-137 281-230 478-279" stroke="#C9A227" stroke-width="6" stroke-linecap="round" />
+  <path d="M204 358h792" stroke="#F5F5F5" stroke-opacity=".12" stroke-width="2" />
+  <path d="M204 428h620" stroke="#F5F5F5" stroke-opacity=".12" stroke-width="2" />
+  <path d="M204 498h444" stroke="#F5F5F5" stroke-opacity=".12" stroke-width="2" />
+  <text x="120" y="1430" fill="#F5F5F5" fill-opacity=".92" font-family="Georgia, serif" font-size="92">Fine Line</text>
+  <text x="120" y="1502" fill="#A3A3A3" font-family="Arial, sans-serif" font-size="28" letter-spacing="10">PLACEHOLDER 003</text>
+</svg>

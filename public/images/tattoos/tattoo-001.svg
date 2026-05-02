@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1600" fill="none">
+  <rect width="1200" height="1600" fill="#101010" />
+  <rect x="66" y="66" width="1068" height="1468" rx="48" stroke="#C9A227" stroke-opacity=".28" stroke-width="2" />
+  <circle cx="862" cy="328" r="218" fill="#C9A227" fill-opacity=".08" />
+  <path d="M253 1286C391 1111 520 992 657 944c97-34 169-117 201-262" stroke="#F5F5F5" stroke-opacity=".86" stroke-width="16" stroke-linecap="round" />
+  <path d="M338 1112c117-155 235-252 356-291 91-29 148-88 173-175" stroke="#C9A227" stroke-width="8" stroke-linecap="round" />
+  <path d="M278 540c89 0 160-72 160-160s-71-160-160-160-160 72-160 160 71 160 160 160Z" stroke="#F5F5F5" stroke-opacity=".4" stroke-width="10" />
+  <text x="120" y="1430" fill="#F5F5F5" fill-opacity=".92" font-family="Georgia, serif" font-size="92">Blackwork</text>
+  <text x="120" y="1502" fill="#A3A3A3" font-family="Arial, sans-serif" font-size="28" letter-spacing="10">PLACEHOLDER 001</text>
+</svg>
