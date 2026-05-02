@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { themeOptions } from "../themes";
-import { hiddenThemeRoute } from "../utils/env";
+import { hiddenThemeLabRoute, hiddenThemeRoute } from "../utils/env";
 
 type DevThemeToggleProps = {
   selectedThemeId: string;
@@ -80,6 +80,12 @@ export function DevThemeToggle({
               className="mt-4 inline-flex text-xs uppercase tracking-[0.28em] text-white/60 transition hover:text-[#c9a227]"
             >
               Abrir preview completo
+            </a>
+            <a
+              href={hiddenThemeLabRoute}
+              className="mt-3 inline-flex text-xs uppercase tracking-[0.28em] text-white/60 transition hover:text-[#c9a227]"
+            >
+              Abrir laboratorio visual
             </a>
           </div>
         )}
