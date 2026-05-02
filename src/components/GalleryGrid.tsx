@@ -68,7 +68,7 @@ export function GalleryGrid({ images }: GalleryGridProps) {
         </div>
       </div>
 
-      <div className="px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto w-full max-w-[1680px] px-4 sm:px-6 lg:px-8">
         <div className="gallery-grid grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-12 lg:gap-5">
           {images.map((image) => (
             <GalleryTile key={image.id} image={image} />
